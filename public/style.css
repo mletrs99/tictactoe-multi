@@ -190,6 +190,10 @@ button:hover {
         box-sizing: border-box;
     }
 
+    h2{
+        margin-bottom: -10%;
+    }
+
     button {
         font-size: 14px;
         padding: 6px 12px;
