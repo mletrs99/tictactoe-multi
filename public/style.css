@@ -174,64 +174,91 @@ button:hover {
     background-color: #a34a4a;
 }
 
-/* Mobile layout */
 /* MOBILE LAYOUT */
 @media (max-width: 768px) {
 
     body.game-layout {
         flex-direction: column;
-        margin: 20px 0;
+        margin: 0;
+        padding: 8px;
+        gap: 8px;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        justify-content: flex-start;
     }
 
     .game-info {
-        width: 90%;
+        width: 100%;
         height: auto;
-        padding: 15px;
+        padding: 8px;
         box-sizing: border-box;
     }
 
-    h2{
-        margin-bottom: -10%;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 6px 12px;
-        letter-spacing: 1px;
-        margin: 5px;
-    }
-
-    /* Reduce spacing around login */
-    #login {
-        margin-bottom: 5px;
-    }
-
-    /* Reduce spacing around status */
-    #status {
-        font-size: 18px;
-        letter-spacing: 2px;
-        margin: 5px 0;
-        padding: 5px;
-    }
-
     .game-info h1 {
-        font-size: 42px;
+        font-size: 32px;
+        margin: 0;
     }
 
-    /* Hide decorative artwork on mobile */
+    .game-info h2 {
+        font-size: 13px;
+        margin: 0 0 6px;
+        letter-spacing: 2px;
+    }
+
+    /* Hide artwork on mobile */
     .game-info pre {
         display: none;
     }
 
-    /* Make board fit smaller screens */
-    #board {
-        width: 90vw;
-        height: 90vw;
-        max-width: 600px;
-        max-height: 600px;
+    /* Compact login section */
+    #login {
+        margin-bottom: 3px;
+    }
+
+    #login input {
+        padding: 5px 8px;
+        margin: 3px;
+        width: 110px;
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        margin: 3px;
+    }
+
+    #role {
+        font-size: 13px;
+        margin: 3px;
+    }
+
+    #status {
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin: 3px;
+        padding: 3px;
     }
 
     .game-canvas {
         width: 100%;
+        gap: 4px;
+    }
+
+    /* Board adjusts to phone width AND height */
+    #board {
+        width: min(88vw, 48dvh);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        max-width: 600px;
+        margin: 3px auto;
+        box-sizing: border-box;
+    }
+
+    .game-canvas h3 {
+        font-size: 10px;
+        margin: 2px;
+        letter-spacing: 1px;
     }
 }
