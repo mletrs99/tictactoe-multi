@@ -29,11 +29,14 @@ boardCanvas.addEventListener("click", event => {
     }
 
     const rect = boardCanvas.getBoundingClientRect();
+
+    //find where user clicked on the board
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
-    const col = Math.floor(x / 200);
-    const row = Math.floor(y / 200);
+    //adjust coordinates based on displayed board size
+    const col = Math.floor(x / rect.width * 3);
+    const row = Math.floor(y / rect.height * 3);
 
     const index = row * 3 + col;
 

@@ -9,7 +9,7 @@
 /* Apply styles to the entire page */
 body {
     background-color: #A8B58A;
-    margin-top: 10%;
+    margin-top: 2.7%;
     text-align: center;
 }
 
@@ -172,4 +172,42 @@ button {
 button:hover {
     color: #eae2cc;
     background-color: #a34a4a;
+}
+
+/* Mobile layout */
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+
+    body.game-layout {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .game-info {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .game-info h1 {
+        font-size: 42px;
+    }
+
+    /* Hide decorative artwork on mobile */
+    .game-info pre {
+        display: none;
+    }
+
+    /* Make board fit smaller screens */
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    .game-canvas {
+        width: 100%;
+    }
 }
