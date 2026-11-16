@@ -190,6 +190,26 @@ button:hover {
         box-sizing: border-box;
     }
 
+    button {
+        font-size: 14px;
+        padding: 6px 12px;
+        letter-spacing: 1px;
+        margin: 5px;
+    }
+
+    /* Reduce spacing around login */
+    #login {
+        margin-bottom: 5px;
+    }
+
+    /* Reduce spacing around status */
+    #status {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+
     .game-info h1 {
         font-size: 42px;
     }
